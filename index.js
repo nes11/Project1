@@ -9,9 +9,12 @@ app.get('/', function (req, res) {
 })
 
 app.get('/blah', function (req, res) {
+  const query = req.query;
   console.log('/blah has been visited');
-  console.log(req);
-  res.send('Fuck you world');
+  console.log("Query is:", query);
+  const responseText = 'Fuck you world ' + query.name;
+  res.send(responseText);
+  console.log('Responded with:', responseText)
 })
 
 app.listen(port, function(){ console.log('this application is listening on port', port)});
