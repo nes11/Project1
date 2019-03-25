@@ -9,7 +9,6 @@ const makeComputerChoice = () => {
   } else {
       computerChoice = 'scissors';
   }
-  console.log('The computer has chosen', computerChoice);
   return computerChoice;
 }
 
